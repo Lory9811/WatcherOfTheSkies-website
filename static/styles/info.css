@@ -1,0 +1,35 @@
+.info {
+	height: 95vh;
+}
+
+.info .container {
+	height: 23.75vh;
+	padding: 2vw 5vh;
+	font-family: sans-serif;
+	border-top: 4px solid orangered;
+	border-bottom: 4px solid orangered;
+}
+
+.info .container:nth-child(odd) {
+	background-color: black;
+	color: white;
+}
+
+.info .container:nth-child(even) {
+	background-color: white;
+	color: black;
+}
+
+.info .container:first-child {
+	border-top: none;
+}
+
+.info .container:last-child {
+	border-bottom: none;
+}
+
+.info .container .btn {
+	position: absolute;
+	right: 3vw;
+	bottom: 3vh;
+}

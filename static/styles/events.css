@@ -1,0 +1,91 @@
+.events {
+	height: 95vh;
+}
+
+.projection-img {
+	position: absolute;
+	top: 1vh;
+	left: 5vw;
+	height: inherit;
+	width: 20%;
+}
+
+#event-canvas {
+	width: 99%;
+	height: 100%;
+	padding: 0;
+	margin-top: 2vh;
+	margin-left: 1vw;
+}
+
+.facade {
+	position: absolute;
+	height: 100%;
+	top: 2vh;
+}
+
+.facade.facade-l {
+	right: 31%;
+}
+
+.facade.facade-r {
+	right: 0vw;
+}
+
+.events-list {
+	list-style: none;
+	padding: 2%;
+	margin: 0;
+	position: absolute;
+	top: 2vh;
+	right: 2vw;
+	/*width: 20vw;*/
+	width: 91%;
+	height: 100%;
+	overflow: scroll;
+	color: white;
+	background: gray;
+}
+
+.events-list::-webkit-scrollbar {
+	display: none;
+}
+
+.events-list li {
+	height: 22%;
+	padding-top: 6%;
+	background: orangered;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 3vh;
+	text-decoration: none;
+	color: white;
+	border-bottom: 1px solid #c63600;
+}
+
+.events-list a {
+	color: whitesmoke;
+	text-decoration-line: none;
+}
+
+.events-list a:nth-child(even) li {
+	background: #ff6126;
+}
+
+.events-list li:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.events-list a:hover li {
+	background: #c63600;
+}
+
+.event-desc .jumbotron{
+	margin-top: 3vh;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	padding: 2vh 3vw;
+	border: 2px solid orangered;
+	background-color: white;
+}

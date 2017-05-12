@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Telescopio Toledo - INFN</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
+	<link rel="stylesheet" href="static/styles/main.css">
+	<link rel="stylesheet" href="static/styles/home.css">
+	<link rel="stylesheet" href="static/styles/events.css">
+	<link rel="stylesheet" href="static/styles/info.css">
+</head>
+<body>
+	<nav class="navbar fixed-top navbar-toggleable-sm navbar-light" id="navbar">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarContent">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a href="" class="navbar-brand">Telescopio INFN</a>
+		<div class="collapse navbar-collapse" id="navbarContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active" id="home-btn">
+					<a class="nav-link" href="#home">Home</a>
+				</li>
+				<li class="nav-item" id="events-btn">
+					<a class="nav-link" href="#events">Eventi</a>
+				</li>
+				<li class="nav-item" id="info-btn">
+					<a class="nav-link" href="#info">Info</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav navbar-right">
+				<li class="nav-item">
+					<a class="nav-link disabled" href="">Impostazioni</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="">Login</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="page page-v active" id="home">		
+		<div class="container col-12 col-xl-8 showcase">
+			<div class="row">			
+				<div class="container-fluid col-6 showcase-content">
+					<div class="events-img">
+						<img src="static/images/telescope.png" alt="Eventi" class="img-fluid events-img">
+					</div>
+					<div class="showcase-text events-text">
+						<p>Qui puoi vedere tutti gli eventi registrati dal telescopio</p>
+						<a role="button" class="btn btn-orange btn-md float-right" id="events-btn-2" href="#events">
+							Eventi
+						</a>
+					</div>
+				</div>
+				<div class="container-fluid col-6 showcase-content" style="background-color: #14141f;">
+					<canvas id="diag-canvas"></canvas>
+					<div class="showcase-text diag-text">
+						<p>Qui puoi vedere lo stato del telescopio e i possibili errori</p>
+						<a role="button" class="btn btn-orange btn-md float-right" id="diag-btn-2" href="#">
+							Diagnostica
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="container-fluid col-6 showcase-content" style="background-color: #14141f;">
+					<div class="showcase-text info-text">
+						<p>Qui puoi leggere tutte le informazioni e le novità dal telescopio</p>
+						<a role="button" class="btn btn-orange btn-md float-right" id="info-btn-2" href="#info">
+							Informazioni
+						</a>
+					</div>
+					<div class="info-sym">i</div>
+				</div>
+				<div class="container-fluid col-6 showcase-content">
+					<div class="showcase-text our-content-text">
+						<p>Qui puoi trovare il materiale prodotto dalla nostra scuola</p>
+						<a role="button" class="btn btn-orange btn-md float-right" id="content-btn-2" href="#">
+							Altro materiale
+						</a>
+					</div>
+					<div class="our-content-img">
+						<img src="static/images/file.png" alt="" class="img-fluid our-content-img">
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#videos" class="video-bar-link">
+			<div class="video-bar">
+				<img src="static/images/arrow-pointy.png" alt="" class="video-bar-arrow-left">
+				<span class="video-bar-text">VIDEO DIVULGATIVI</span>
+				<img src="static/images/arrow-pointy.png" alt="" class="video-bar-arrow-right">
+			</div>
+		</a>
+	</div>
+	
+	<div class="page page-v" id="videos">
+		<div class="container col-12 col-xl-8 videos">
+			<div class="row">
+				<span class="col-1"></span>
+				<iframe class="col-4" src="https://www.youtube.com/embed/2X_2IdybTV0" frameborder="0" allowfullscreen></iframe>
+				<span class="col-2"></span>
+				<iframe class="col-4" src="https://www.youtube.com/embed/b8S_T772H1c" frameborder="0" allowfullscreen></iframe>
+				<span class="col-1"></span>
+			</div>
+			<div class="row">
+				<span class="col-1"></span>
+				<iframe class="col-4" src="https://www.youtube.com/embed/fWqBmmPQP40" frameborder="0" allowfullscreen></iframe>
+				<span class="col-2"></span>
+			</div>
+		</div>
+	</div>
+	
+	<div class="page page-v" id="events">
+		<div class="container col-12 col-xl-8 events">
+			<div class="row">
+				<div class="container col-8">
+					<canvas id="event-canvas">
+						Il tuo browser non supporta il canvas
+					</canvas>
+					<img src="static/images/projection.png" alt=""  class="projection-img">
+					<img src="static/images/facade.png" alt="" class="facade facade-r">
+					<img src="static/images/facade.png" alt="" class="facade facade-l">
+				</div>
+				<div class="col-4">
+					<ul class="events-list">
+						<a href=""><li>ST000A</li></a>
+						<a href=""><li>ST0009</li></a>
+						<a href=""><li>ST0008</li></a>
+						<a href=""><li>ST0007</li></a>
+						<a href=""><li>ST0006</li></a>
+						<a href=""><li>ST0005</li></a>
+						<a href=""><li>ST0004</li></a>
+						<a href=""><li>ST0003</li></a>
+						<a href=""><li>ST0002</li></a>
+						<a href=""><li>ST0001</li></a>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="container col-12 event-desc">
+					<div class="jumbotron">
+						<h1>ST000A</h1>
+						<p>012345678901234567890123456789</p>
+						<p>987654321098765432109876543210</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="page page-v" id="info">
+		<div class="container col-12 col-xl-8 info">
+			<div class="row">
+				<div class="container col-12">
+					<h1>Il telescopio e come funziona</h1>
+					<a role="button" class="btn btn-orange btn-lg float-right" id="btn-info-panel-1" href="#info">
+							Vedi
+					</a>
+				</div>
+				<div class="container col-12">
+					<h1>Progetto: a scuola di astroparticelle</h1>
+					<a role="button" class="btn btn-orange btn-lg float-right" id="btn-info-panel-2" href="#info">
+							Vedi
+					</a>
+				</div>
+				<div class="container col-12">
+					<h1>Ricevi notifiche attraverso il nostro canale di Telegram</h1>
+					<a role="button" class="btn btn-orange btn-lg float-right" id="btn-info-panel-3" href="https://t.me/watcheroftheskies">
+							Unisciti
+					</a>
+				</div>
+				<div class="container col-12">
+					<h1>Novità dell telescopio</h1>
+					<a role="button" class="btn btn-orange btn-lg float-right" id="btn-info-panel-4" href="#info">
+							Vedi
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="page page-h" id="diag">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, deleniti, accusamus. Natus vel neque veniam commodi accusantium incidunt consequuntur corrupti non, sapiente, repellendus doloribus ipsum, in, blanditiis minus harum ipsa!</p>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	
+	<script id="vertex-shader" src="static/shaders/vertex-shader.vert" type="x-shader/x-vertex"></script>
+	<script id="fragment-shader" src="static/shaders/fragment-shader.frag" type="x-shader/x-fragment"></script>
+	
+	<script src="https://www.khronos.org/registry/webgl/sdk/demos/common/webgl-utils.js"></script>
+	<script src="static/scripts/WebGL/webGlHelper.js"></script>
+	<script src="static/scripts/manager.js"></script>
+	<script src="static/scripts/event.js"></script>
+</body>
+</html>
