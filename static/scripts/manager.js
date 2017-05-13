@@ -16,22 +16,22 @@ function changePage() {
 	if ($(this).parent().hasClass("active")) {
 		return;
 	} else {
-		transition(pages[currentPageId], $(this).data("page"));
+		transition(pages[currentPageId], $(this).data("page"), $(this).data("orientation"));
 	}
 }
 
-function transition(currentPage, nextPage) {
-	$('#' + currentPage).addClass("hv");
+function transition(currentPage, nextPage, orientation) {
+	$('#' + currentPage).addClass(orientation == "vertical" ? "hv" : "hh");
 	$('#' + currentPage).removeClass("active");
 	$('.' + currentPage + '-btn').removeClass("active");
-	$('#' + nextPage).addClass("cv");
+	$('#' + nextPage).addClass(orientation == "vertical" ? "cv" : "ch");
 	$('#' + nextPage).removeClass("hidden");
 	$('#' + nextPage).addClass("active");
 	$('.' + nextPage + '-btn').addClass("active");
 	setTimeout(
-	function() {		
-		$('#' + currentPage).removeClass("hv");
-		$('#' + nextPage).removeClass("cv");
+	function() {
+		$('#' + currentPage).removeClass(orientation == "vertical" ? "hv" : "hh");
+		$('#' + nextPage).removeClass(orientation == "vertical" ? "cv" : "ch");
 		$('#' + currentPage).addClass("hidden");
 	}, 500);
 	currentPageId = pages.indexOf(nextPage);
