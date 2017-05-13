@@ -19,14 +19,17 @@
 		<a href="" class="navbar-brand">Telescopio INFN</a>
 		<div class="collapse navbar-collapse" id="navbarContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active" id="home-btn">
-					<a class="nav-link" href="#home">Home</a>
+				<li class="nav-item active home-btn">
+					<a class="nav-link home-btn-lnk" data-page="home">Home</a>
 				</li>
-				<li class="nav-item" id="events-btn">
-					<a class="nav-link" href="#events">Eventi</a>
+				<li class="nav-item events-btn">
+					<a class="nav-link events-btn-lnk" data-page="events">Eventi</a>
 				</li>
-				<li class="nav-item" id="info-btn">
-					<a class="nav-link" href="#info">Info</a>
+				<li class="nav-item info-btn">
+					<a class="nav-link info-btn-lnk" data-page="info">Info</a>
+				</li>
+				<li class="nav-item diag-btn">
+					<a class="nav-link" data-page="diag">Diagnostica</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav navbar-right">
@@ -96,7 +99,7 @@
 		</a>
 	</div>
 	
-	<div class="page page-v" id="videos">
+	<div class="page page-v hidden" id="videos">
 		<div class="container col-12 col-xl-8 videos">
 			<div class="row">
 				<span class="col-1"></span>
@@ -113,7 +116,7 @@
 		</div>
 	</div>
 	
-	<div class="page page-v" id="events">
+	<div class="page page-v hidden" id="events">
 		<div class="container col-12 col-xl-8 events">
 			<div class="row">
 				<div class="container col-8">
@@ -151,7 +154,7 @@
 		</div>
 	</div>
 	
-	<div class="page page-v" id="info">
+	<div class="page page-v hidden" id="info">
 		<div class="container col-12 col-xl-8 info">
 			<div class="row">
 				<div class="container col-12">
@@ -182,7 +185,7 @@
 		</div>
 	</div>
 	
-	<div class="page page-h" id="diag">
+	<div class="page page-h hidden" id="diag">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, deleniti, accusamus. Natus vel neque veniam commodi accusantium incidunt consequuntur corrupti non, sapiente, repellendus doloribus ipsum, in, blanditiis minus harum ipsa!</p>
 	</div>
 
