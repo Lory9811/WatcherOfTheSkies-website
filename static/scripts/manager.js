@@ -13,7 +13,7 @@ function update() {
 }
 
 function changePage() {
-	if ($(this).hasClass("active")) {
+	if ($(this).parent().hasClass("active")) {
 		return;
 	} else {
 		transition(pages[currentPageId], $(this).data("page"));
@@ -23,7 +23,6 @@ function changePage() {
 function transition(currentPage, nextPage) {
 	$('#' + currentPage).addClass("hv");
 	$('#' + currentPage).removeClass("active");
-	$('#' + currentPage).addClass("hidden");
 	$('.' + currentPage + '-btn').removeClass("active");
 	$('#' + nextPage).addClass("cv");
 	$('#' + nextPage).removeClass("hidden");
@@ -33,6 +32,7 @@ function transition(currentPage, nextPage) {
 	function() {		
 		$('#' + currentPage).removeClass("hv");
 		$('#' + nextPage).removeClass("cv");
+		$('#' + currentPage).addClass("hidden");
 	}, 500);
 	currentPageId = pages.indexOf(nextPage);
 	console.log(currentPageId);
