@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="static/styles/events.css">
 	<link rel="stylesheet" href="static/styles/info.css">
 	<link rel="stylesheet" href="static/styles/diag.css">
+	<link rel="stylesheet" href="static/styles/login.css">
 </head>
 <body>
 	<nav class="navbar fixed-top navbar-toggleable-sm navbar-light" id="navbar">
@@ -35,10 +36,19 @@
 			</ul>
 			<ul class="navbar-nav navbar-right">
 				<li class="nav-item">
-					<a class="nav-link disabled" href="">Impostazioni</a>
+					<a class="nav-link disabled" href="#">Impostazioni</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="">Login</a>
+					<a class="nav-link" href="#" id="login">Login</a>
+					<div class="hidden" id="login-popup">
+						<p>Login</p>
+						<input type="username" id='username' placeholder="Username">
+						<input type="password" id='password' placeholder="Password">
+						<div>
+							<button class="btn btn-sm btn-secondary">Registrati</button>
+							<button class="btn btn-sm btn-orange" type="submit">Login</button>
+						</div>
+					</div>
 				</li>
 			</ul>
 		</div>

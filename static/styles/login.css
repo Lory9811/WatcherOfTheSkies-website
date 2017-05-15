@@ -1,0 +1,32 @@
+#login-popup {
+	background: white;	
+	margin: 1%;
+	padding: 1%;
+	position: absolute;
+	right: 0;
+	top: 3.5vh;
+	border-radius: 5px;
+	border: 1px gray solid;
+}
+
+#login-popup input {
+	display: block;
+	width: 100%;
+	margin-top: 2px;
+	border-radius: 5px;
+	border: 1px gray solid;
+	padding: 2%;
+}
+
+#login-popup input:first-child {
+	margin: 0;
+}
+
+#login-popup div {
+	margin-top: 5%;
+	text-align: center;
+}
+
+#login-popup.hidden {
+	display: none;
+}
