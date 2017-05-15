@@ -2,3 +2,31 @@
 	background-color: #2f2f31;
 	color: white;
 }
+
+.page#diag img {
+	height: 100%;
+	width: 100%;
+}
+
+.graphs-top-row {
+	padding-top: 2vh;
+}
+
+.graphs {
+	padding-top: 1vh;
+}
+
+.lvl-counter {
+	text-align: center;
+	margin-top: 1%;
+}
+
+#graph-canvas {
+	width: 100%;
+	height: auto;
+}
+
+#diag-3d-canvas {
+	width: 100%;
+	height: auto;
+}

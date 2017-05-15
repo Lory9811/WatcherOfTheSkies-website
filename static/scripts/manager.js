@@ -13,10 +13,11 @@ function update() {
 }
 
 function changePage() {
-	if ($(this).parent().hasClass("active")) {
+	if ($(this).parent().hasClass("active") && !$(this).hasClass("btn")) {
 		return;
 	} else {
-		transition(pages[currentPageId], $(this).data("page"), $(this).data("orientation"));
+		console.log($(this).data("page"));
+		transition(pages[currentPageId], $(this).data("page"), pages[currentPageId] != "diag" ? $(this).data("orientation") : "horizontal");
 	}
 }
 
@@ -80,24 +81,23 @@ $(document).ready(
 			diag_canvas_context.clearRect(0, 0, diag_canvas.width, diag_canvas.height);
 			diag_canvas_context.fillStyle='orangered';
 			diag_canvas_context.fillRect(0, 20, randomRange(0, 100), 10);
-			diag_canvas_context.stroke();
+			//diag_canvas_context.stroke();
 			diag_canvas_context.fillRect(0, 35, randomRange(0, 100), 10);
-			diag_canvas_context.stroke();
+			//diag_canvas_context.stroke();
 			diag_canvas_context.fillRect(0, 50, randomRange(0, 100), 10);
-			diag_canvas_context.stroke();
+			//diag_canvas_context.stroke();
 			diag_canvas_context.fillRect(0, 65, randomRange(0, 100), 10);
-			diag_canvas_context.stroke();			
+			//diag_canvas_context.stroke();			
 			diag_canvas_context.fillRect(0, 80, randomRange(0, 100), 10);
-			diag_canvas_context.stroke();
+			//diag_canvas_context.stroke();
 			diag_canvas_context.fillRect(0, 95, randomRange(0, 100), 10);
-			diag_canvas_context.stroke();
+			//diag_canvas_context.stroke();
 			diag_canvas_context.fillRect(0, 110, randomRange(0, 100), 10);
-			diag_canvas_context.stroke();
+			//diag_canvas_context.stroke();
 			diag_canvas_context.fillRect(0, 125, randomRange(0, 100), 10);
 			diag_canvas_context.stroke();
 		}, 200);
-	}
-);
+});
 
 function randomRange(min, max) {
 	return Math.floor(Math.random() * (Math.ceil(max)-Math.floor(min))) + Math.floor(min);

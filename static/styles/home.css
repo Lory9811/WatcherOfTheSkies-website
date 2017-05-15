@@ -126,10 +126,10 @@ img.events-img {
 	top: 0vh;
 }
 
-.our-content-text .btn {
+.our-content .btn {
 	position: absolute;
-	left: 1vw;
-	top: 20.5vh;
+	left: 2.5vw;
+	top: 22vh;
 }
 
 div.our-content-img {
@@ -178,10 +178,10 @@ img.our-content-img {
 	top: 2vh;
 }
 
-.info-text .btn {
+.info .btn {
 	position: absolute;
 	right: 2.5vw;
-	top: 20.5vh;
+	top: 22vh;
 }
 
 .showcase-text {

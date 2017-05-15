@@ -43,13 +43,14 @@
 	width: 91%;
 	height: 100%;
 	overflow: scroll;
+	overflow-x: hidden;
 	color: white;
 	background: gray;
 }
 
-.events-list::-webkit-scrollbar {
+/*.events-list::-webkit-scrollbar {
 	display: none;
-}
+}*/
 
 .events-list li {
 	height: 22%;

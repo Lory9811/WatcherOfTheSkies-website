@@ -53,7 +53,7 @@
 					</div>
 					<div class="showcase-text events-text">
 						<p>Qui puoi vedere tutti gli eventi registrati dal telescopio</p>
-						<a role="button" class="btn btn-orange btn-md float-right" id="events-btn-2" href="#events">
+						<a role="button" class="btn btn-orange btn-md float-right events-btn-lnk" href="#" data-page="events" data-orientation="vertical">
 							Eventi
 						</a>
 					</div>
@@ -62,37 +62,37 @@
 					<canvas id="diag-canvas"></canvas>
 					<div class="showcase-text diag-text">
 						<p>Qui puoi vedere lo stato del telescopio e i possibili errori</p>
-						<a role="button" class="btn btn-orange btn-md float-right" id="diag-btn-2" href="#">
+						<a role="button" class="btn btn-orange btn-md float-right diag-btn-lnk" data-page="diag" data-orientation="horizontal" href="#">
 							Diagnostica
 						</a>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="container-fluid col-6 showcase-content" style="background-color: #14141f;">
+				<div class="container-fluid col-6 showcase-content info" style="background-color: #14141f;">
 					<div class="showcase-text info-text">
 						<p>Qui puoi leggere tutte le informazioni e le novità dal telescopio</p>
-						<a role="button" class="btn btn-orange btn-md float-right" id="info-btn-2" href="#info">
-							Informazioni
-						</a>
 					</div>
+					<a role="button" class="btn btn-orange btn-md float-right info-btn-lnk" data-page="info" data-orientation="vertical" href="#">
+						Informazioni
+					</a>
 					<div class="info-sym">i</div>
 				</div>
-				<div class="container-fluid col-6 showcase-content">
+				<div class="container-fluid col-6 showcase-content our-content">
 					<div class="showcase-text our-content-text">
 						<p>Qui puoi trovare il materiale prodotto dalla nostra scuola</p>
-						<a role="button" class="btn btn-orange btn-md float-right" id="content-btn-2" href="#">
-							Altro materiale
-						</a>
 					</div>
+					<a role="button" class="btn btn-orange btn-md float-right" id="content-btn-2" href="#">
+						Altro materiale
+					</a>
 					<div class="our-content-img">
 						<img src="static/images/file.png" alt="" class="img-fluid our-content-img">
 					</div>
 				</div>
 			</div>
 		</div>
-		<a href="#videos" class="video-bar-link">
-			<div class="video-bar">
+		<a href="#" class="video-bar-link videos-btn-lnk" data-page="videos" data-orientation="vertical">
+			<div class="video-bar" data-page="videos">
 				<img src="static/images/arrow-pointy.png" alt="" class="video-bar-arrow-left">
 				<span class="video-bar-text">VIDEO DIVULGATIVI</span>
 				<img src="static/images/arrow-pointy.png" alt="" class="video-bar-arrow-right">
@@ -187,7 +187,66 @@
 	</div>
 	
 	<div class="page page-h hidden" id="diag">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, deleniti, accusamus. Natus vel neque veniam commodi accusantium incidunt consequuntur corrupti non, sapiente, repellendus doloribus ipsum, in, blanditiis minus harum ipsa!</p>
+		<div class="container col-12 col-xl-8">
+			<div class="row">
+				<div class="col-5">
+					<canvas id="diag-3d-canvas"></canvas>
+				</div>
+				<div class="col-7">
+					<canvas id="graph-canvas"></canvas>
+				</div>
+			</div>
+			<div class="row">
+				<div class="container col-5">
+					<h1>Description</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate repudiandae ipsa, eius aperiam deserunt libero unde. Obcaecati necessitatibus et fuga iste illum, odio quo incidunt molestiae magnam mollitia iusto beatae.</p>
+				</div>
+				<div class="container col-7">
+					<div class="row grapsh-controls-row">
+						<span class="col-1"></span>
+						<button class="btn btn-orange col-1">&#60</button>
+						<span class="col-3"></span>
+						<div class="lvl-counter col-2">1/10</div>
+						<span class="col-3"></span>
+						<button class="btn btn-orange col-1">&#62</button>
+					</div>
+					<div class="row graphs-top-row">
+						<span class="col-1"></span>
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<span class="col-1"></span>				
+					</div>
+					<div class="row graphs">
+						<span class="col-1"></span>
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<span class="col-1"></span>
+					</div><div class="row graphs-top-row">
+						<span class="col-1"></span>
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<span class="col-1"></span>
+					</div><div class="row graphs">
+						<span class="col-1"></span>
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<img src="static/images/graph.png" alt="" class="img-fluid col-2">
+						<span class="col-1"></span>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
